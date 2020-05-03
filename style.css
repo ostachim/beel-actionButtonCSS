@@ -1,0 +1,97 @@
+*{
+    margin:0;
+    padding:0;
+
+}
+
+body{
+    background-color:gray;
+}
+
+.bell{
+    position:fixed;
+    bottom:5vh;
+    right:5vw;
+    background-color:transparent;
+    width:40px;
+    height:40px;
+    border:4px green solid;
+    border-radius:50%;
+    transition:0.5s;
+    cursor:pointer;
+    
+
+
+}
+
+.bell i{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%, -50%);
+    font-size:25px;
+    color:green;
+    animation: rot 0.5s linear infinite alternate ;
+    transform-origin:50% 0%;
+    transition:0.5s;
+}
+
+.bell:hover i{
+    color:red;
+    /*animation-play-state:paused;*/
+    animation-duration:0.2s;
+    
+}
+.bell:hover{
+    
+    border-color:red;
+}
+@keyframes rot{
+    0%{
+        transform:translate(-50%, -50%) rotate(20deg);
+    }
+    100%{
+        transform:translate(-50%, -50%) rotate(-20deg);
+    }
+}
+
+
+.icon{
+    position:absolute;
+    width:50px;
+    height:50px;
+    bottom:5vh;
+    left:50%;
+    transform:translateX(-50%);
+    background-color:transparent;
+    border:4px transparent solid;
+    border-radius:50%;
+    cursor:pointer;
+    
+}
+
+.icon i{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%) translateY(0%);
+    font-size:30px;
+    color:green;
+    text-shadow:0 10px 0 green, 0 20px 0 green;
+    animation:arrow 0.6s linear infinite;
+}
+
+
+.icon:hover i{
+    animation-play-state:paused;
+    font-size:32px;
+}
+
+@KEYFRAMES arrow{
+    0%{
+
+    }
+
+    50%{
+        transform:translateX(-50%) translateY(50%);
+    }
+}
